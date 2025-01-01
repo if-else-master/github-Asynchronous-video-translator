@@ -1,0 +1,11 @@
+2024-11-12 11:00:05,435 - INFO - \u958b\u59cb\u8655\u7406\u97f3\u983b\u6587\u4ef6: D:\\u5c08\u6848\Real-Time-Voice-Cloning\.venv\Real-Time-Voice-Cloning\Bo2.wav
+2024-11-12 11:00:06,646 - ERROR - \u8a9e\u97f3\u514b\u9686\u904e\u7a0b\u4e2d\u767c\u751f\u932f\u8aa4: Download for synthesizer.pt failed. You may download models manually instead.
+https://drive.google.com/drive/folders/1fU6umc5uQAVR2udZdHX-lDgXYzTyqG_j
+Traceback (most recent call last):
+  File "d:\\u5c08\u6848\Real-Time-Voice-Cloning\.venv\Real-Time-Voice-Cloning\test.py", line 169, in clone_voice
+    ensure_default_models(Path("saved_models"))
+  File "d:\\u5c08\u6848\Real-Time-Voice-Cloning\.venv\Real-Time-Voice-Cloning\utils\default_models.py", line 54, in ensure_default_models
+    assert target_path.exists() and target_path.stat().st_size == size, \
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Download for synthesizer.pt failed. You may download models manually instead.
+https://drive.google.com/drive/folders/1fU6umc5uQAVR2udZdHX-lDgXYzTyqG_j
