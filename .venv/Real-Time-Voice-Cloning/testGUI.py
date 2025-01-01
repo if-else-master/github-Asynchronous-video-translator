@@ -157,7 +157,7 @@ class VoiceCloningGUI:
             
             # 建立 OpenAI 客戶端
             client = OpenAI(
-                api_key = os.getenv('OPENAI_API_KEY')
+                api_key = 'Your openai API KEY'
             )
             
             with open(file_path, "rb") as audio_file:
