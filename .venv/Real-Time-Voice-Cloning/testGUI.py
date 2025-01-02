@@ -157,7 +157,7 @@ class VoiceCloningGUI:
             
             # 建立 OpenAI 客戶端
             client = OpenAI(
-                api_key = 'Your openai API KEY'
+                api_key = ''
             )
             
             with open(file_path, "rb") as audio_file:
@@ -209,8 +209,8 @@ class VoiceCloningGUI:
     def generate_voice(self):
         try:
             if not self.input_path.get():
-                messagebox.showerror("Error", "請選擇輸入語音檔案 / Please select input file")
-                return
+                    messagebox.showerror("Error", "請選擇輸入語音檔案 / Please select input file")
+                    return
             
             if not self.text_input.get("1.0", tk.END).strip():
                 messagebox.showerror("Error", "請輸入要合成的文字 / Please enter text")
@@ -268,6 +268,7 @@ class VoiceCloningGUI:
             self.status_var.set("發生錯誤 / Error occurred")
         finally:
             self.progress['value'] = 0
+            
 
     def play_audio(self):
         if self.last_generated_wav is not None:

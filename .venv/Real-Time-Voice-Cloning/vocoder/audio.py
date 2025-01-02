@@ -25,6 +25,7 @@ def save_wav(x, path) :
 
 
 def split_signal(x) :
+    
     unsigned = x + 2**15
     coarse = unsigned // 256
     fine = unsigned % 256
