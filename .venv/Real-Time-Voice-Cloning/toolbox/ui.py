@@ -12,6 +12,7 @@ import umap
 from PyQt5.QtCore import Qt, QStringListModel
 from PyQt5.QtWidgets import *
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
+from PyQt5.QtWidgets import QDialog, QApplication, QGridLayout, QComboBox, QLabel, QPushButton, QPlainTextEdit, QProgressBar, QFileDialog, QCheckBox, QHBoxLayout, QVBoxLayout, QDesktopWidget, QLineEdit
 
 from encoder.inference import plot_embedding_as_heatmap
 from toolbox.utterance import Utterance
@@ -34,7 +35,8 @@ colormap = np.array([
     [0, 0, 0],
     [183, 183, 183],
     [76, 255, 0],
-], dtype=np.float) / 255
+], dtype=float) / 255  # 使用內建的 float
+
 
 default_text = \
     "Welcome to the toolbox! To begin, load an utterance from your datasets or record one " \
